@@ -1,0 +1,14 @@
+from mastodon import Mastodon
+
+# Initialize the Mastodon API
+mastodon = Mastodon(
+    access_token="xx",  # access token
+    api_base_url="https://mastodon.social"  # Mastodon instance URL
+)
+
+# Post a status
+try:
+    mastodon.status_post("Hello Mastodon! This is third test post from the API.")
+    print("Post successful!")
+except Exception as e:
+    print(f"Error posting to Mastodon: {e}")
